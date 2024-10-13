@@ -60,6 +60,8 @@ class CurvePolygon:
     def export_coords(self):
         with open("Curved_Polygon_Coords", "w") as file:
             json.dump(self.all_coords, file)
+        with open("Click_Coords", "w") as file:
+            json.dump(self.click_coords, file)
             
     def close_shape(self):
         """Catmull-rom spline: x = 0.5*(2*x1 + (-x0 + x2)*t + (2*x0 - 5*x1 + 4*x2 -x3)*t**2 + (-x0 + 3*x1 -3*x2 + x3)*t**3), same for y, where t ranges from 0-1
