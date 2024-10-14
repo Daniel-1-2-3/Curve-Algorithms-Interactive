@@ -42,7 +42,7 @@ class RecursivePolygon:
                 if e.type == pygame.QUIT:
                     isRunning = False
             self.screen.fill((200, 200, 200))
-            pygame.draw.lines(self.screen, (0, 0, 0), True, self.curve_coords, 10)
+            pygame.draw.polygon(self.screen, (0, 0, 0), self.curve_coords)
             pygame.display.flip()
 
 recursivePolygon = RecursivePolygon()
